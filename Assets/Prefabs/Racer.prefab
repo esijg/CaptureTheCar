@@ -79,7 +79,6 @@ GameObject:
   - 54: {fileID: 5459098}
   - 114: {fileID: 11466130}
   - 114: {fileID: 11489228}
-  - 114: {fileID: 11475368}
   - 114: {fileID: 11496270}
   m_Layer: 0
   m_Name: Racer
@@ -308,6 +307,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &190424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 460638}
+  - 114: {fileID: 11494824}
+  m_Layer: 0
+  m_Name: RocketLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &191352
 GameObject:
   m_ObjectHideFlags: 1
@@ -523,6 +538,18 @@ Transform:
   - {fileID: 472552}
   m_Father: {fileID: 467690}
   m_RootOrder: 3
+--- !u!4 &460638
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467690}
+  m_RootOrder: 5
 --- !u!4 &466290
 Transform:
   m_ObjectHideFlags: 1
@@ -553,6 +580,7 @@ Transform:
   - {fileID: 448772}
   - {fileID: 458784}
   - {fileID: 411500}
+  - {fileID: 460638}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &472552
@@ -1401,29 +1429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
---- !u!114 &11475368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fa55eb64c5cea4aa3c71ae19c434bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  engineSoundStyle: 1
-  lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
-  lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
-  highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
-  highDecelClip: {fileID: 8300000, guid: 03bf91d88fce91c41995d27de63cc967, type: 3}
-  pitchMultiplier: 0.8
-  lowPitchMin: 1
-  lowPitchMax: 5
-  highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
-  dopplerLevel: 1
-  useDoppler: 1
 --- !u!114 &11486320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1448,6 +1453,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 3
+--- !u!114 &11494824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade93079cc56a984f80766ccf31e2dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 196692, guid: d4a7c754ba5fb614f81aead716365304, type: 2}
 --- !u!114 &11496270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1462,6 +1479,8 @@ MonoBehaviour:
   timer: 0
   timerOn: 0
   playerNumber: 3
+  indicator: {fileID: 105420, guid: 59e5337a222de814f93a84025020cc2e, type: 2}
+  flag: 0
 --- !u!124 &12489882
 Behaviour:
   m_ObjectHideFlags: 1

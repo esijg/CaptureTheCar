@@ -6,12 +6,17 @@ public class playerCollision : MonoBehaviour {
     public float timer;
     public bool timerOn;
     public int playerNumber;
+    public GameObject indicator;
+    public bool flag;
     float timeSinceImpact;
-	// Use this for initializat
-	void Start () {
+    GameObject ind;
+    // Use this for initializat
+    void Start () {
         timer = 100;
         timeSinceImpact = 100;
         print(timerOn);
+        flag = false;
+
 	}
 	
 
@@ -25,7 +30,18 @@ public class playerCollision : MonoBehaviour {
         {
             timer -= Time.deltaTime;
         }
-
+        if (timerOn == true && flag == false)
+        {
+            ind = (GameObject) Instantiate(indicator, transform.position, transform.rotation);
+            ind.transform.parent = transform;
+            flag = true;
+            
+        }
+        if (timerOn == false && flag == true)
+        {
+            Destroy(ind);
+            flag = false;
+        }
     }
 
 

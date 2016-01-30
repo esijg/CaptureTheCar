@@ -26,7 +26,6 @@ GameObject:
   - 54: {fileID: 5456262}
   - 114: {fileID: 11448438}
   - 114: {fileID: 11449008}
-  - 114: {fileID: 11468088}
   - 114: {fileID: 11475554}
   m_Layer: 0
   m_Name: Jeep
@@ -258,6 +257,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &172086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420896}
+  - 114: {fileID: 11411914}
+  m_Layer: 0
+  m_Name: RocketLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &174196
 GameObject:
   m_ObjectHideFlags: 1
@@ -304,7 +319,6 @@ GameObject:
   - 20: {fileID: 2065236}
   - 124: {fileID: 12463614}
   - 92: {fileID: 9247450}
-  - 81: {fileID: 8118156}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -393,6 +407,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 439712}
   m_RootOrder: 0
+--- !u!4 &420896
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427120}
+  m_RootOrder: 5
 --- !u!4 &426846
 Transform:
   m_ObjectHideFlags: 1
@@ -415,7 +441,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.89, y: 2.721423e-14, z: -39.36}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401888}
@@ -423,6 +449,7 @@ Transform:
   - {fileID: 439712}
   - {fileID: 485250}
   - {fileID: 483308}
+  - {fileID: 420896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &434090
@@ -953,13 +980,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &8118156
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186116}
-  m_Enabled: 1
 --- !u!82 &8202218
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1280,6 +1300,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11411914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade93079cc56a984f80766ccf31e2dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 196692, guid: d4a7c754ba5fb614f81aead716365304, type: 2}
 --- !u!114 &11421788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1408,29 +1440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
---- !u!114 &11468088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fa55eb64c5cea4aa3c71ae19c434bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  engineSoundStyle: 1
-  lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
-  lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
-  highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
-  highDecelClip: {fileID: 8300000, guid: 03bf91d88fce91c41995d27de63cc967, type: 3}
-  pitchMultiplier: 0.8
-  lowPitchMin: 1
-  lowPitchMax: 5
-  highPitchMultiplier: 0.25
-  maxRolloffDistance: 500
-  dopplerLevel: 1
-  useDoppler: 1
 --- !u!114 &11471154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1457,6 +1466,8 @@ MonoBehaviour:
   timer: 0
   timerOn: 0
   playerNumber: 2
+  indicator: {fileID: 105420, guid: 59e5337a222de814f93a84025020cc2e, type: 2}
+  flag: 0
 --- !u!114 &11497310
 MonoBehaviour:
   m_ObjectHideFlags: 1
