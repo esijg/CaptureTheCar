@@ -9,7 +9,7 @@ public class playerCollision : MonoBehaviour {
     float timeSinceImpact;
 	// Use this for initializat
 	void Start () {
-        timer = 10;
+        timer = 100;
         timeSinceImpact = 100;
         print(timerOn);
 	}
