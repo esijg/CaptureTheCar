@@ -3,13 +3,13 @@ using System.Collections;
 
 public class playerCollision : MonoBehaviour {
 
-    float timer;
+    public float timer;
     public bool timerOn;
     public int playerNumber;
     float timeSinceImpact;
 	// Use this for initializat
 	void Start () {
-        timer = 120;
+        timer = 60;
         timeSinceImpact = 100;
         print(timerOn);
 	}

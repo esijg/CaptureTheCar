@@ -156,6 +156,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11425934, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: timerOn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
   m_IsPrefabParent: 0
@@ -590,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a608ec0574d914abee31bd4c9c650d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   timerOn: 0
   playerNumber: 3
 --- !u!1 &1075431885
@@ -912,6 +917,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11425934, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: timerOn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
   m_IsPrefabParent: 0
@@ -1025,7 +1034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086399f91e7853c4f88d86d8103d9d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whoIsIt: 0
 --- !u!4 &2102857446
 Transform:
   m_ObjectHideFlags: 0
