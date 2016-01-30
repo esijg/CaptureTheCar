@@ -19,7 +19,12 @@ public class startingCollision : MonoBehaviour {
         if(col.gameObject.tag == "player")
         {
             col.gameObject.GetComponent<playerCollision>().timerOn = true;
-            //Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            print("hussa");
+            col.gameObject.GetComponentInParent<playerCollision>().timerOn = true;
         }
     }
 }

@@ -43,6 +43,8 @@ public class GameManagement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
         p1timer = p1.GetComponent<playerCollision>().timer;
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;

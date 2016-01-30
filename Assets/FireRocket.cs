@@ -4,6 +4,7 @@ using System.Collections;
 public class FireRocket : MonoBehaviour {
 
     public GameObject rock;
+    public GameObject rocket;
 
 
 	// Use this for initialization
@@ -15,7 +16,8 @@ public class FireRocket : MonoBehaviour {
 	void Update () {
 	    if(Input.GetButtonDown("Fire" + gameObject.GetComponentInParent<playerCollision>().playerNumber.ToString()))
         {
-            Instantiate(rock, transform.position, transform.rotation);
+            rocket = (GameObject) Instantiate(rock, transform.position, transform.rotation);
+            rocket.transform.parent = transform;
 
         }
 	}
