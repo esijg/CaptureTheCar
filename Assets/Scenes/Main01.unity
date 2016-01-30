@@ -370,6 +370,46 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 478e5d22d4e75e340948f8dcfd51d481, type: 3}
   m_PrefabInternal: {fileID: 1482081188}
+--- !u!1 &435750289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 435750290}
+  - 114: {fileID: 435750291}
+  m_Layer: 0
+  m_Name: RocketLauncher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435750290
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435750289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06775665, y: 2.11, z: 2.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2087300447}
+  m_RootOrder: 8
+--- !u!114 &435750291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 435750289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade93079cc56a984f80766ccf31e2dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 196692, guid: d4a7c754ba5fb614f81aead716365304, type: 2}
 --- !u!1001 &469689966
 Prefab:
   m_ObjectHideFlags: 0
