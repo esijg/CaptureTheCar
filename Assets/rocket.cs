@@ -12,4 +12,13 @@ public class rocket : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+
+            Destroy(gameObject);
+
+
+
+    }
 }

@@ -8,7 +8,6 @@ public class FireRocket : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    
 
     }
 	
@@ -16,7 +15,7 @@ public class FireRocket : MonoBehaviour {
 	void Update () {
 	    if(Input.GetButtonDown("Fire" + gameObject.GetComponentInParent<playerCollision>().playerNumber.ToString()))
         {
-            Instantiate(rock, transform.position, Quaternion.identity);
+            Instantiate(rock, transform.position, transform.rotation);
 
         }
 	}
