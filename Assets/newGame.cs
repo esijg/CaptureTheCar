@@ -13,7 +13,7 @@ public class newGame : MonoBehaviour {
         
         if (Input.GetKeyDown("return"))
         {
-            Application.LoadLevel("Main01");
+            Application.LoadLevel("MainScene");
         }
     }
 }

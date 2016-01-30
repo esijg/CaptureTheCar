@@ -15,8 +15,20 @@ public class rocket : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+        Vector3 expPos = transform.position;
+        Collider[] colliders = Physics.OverlapSphere(expPos, 10);
 
-            Destroy(gameObject);
+        foreach (Collider hit in Physics.OverlapSphere(transform.position, 10))
+        {
+
+            if (hit.GetComponent<Rigidbody>())
+            {
+                hit.GetComponent<Rigidbody>().AddExplosionForce(10000, expPos, 10);
+            }
+
+
+        }
+        Destroy(gameObject);
 
 
 

@@ -12,7 +12,7 @@ public class playerCollision : MonoBehaviour {
     GameObject ind;
     // Use this for initializat
     void Start () {
-        timer = 100;
+        timer = 5;
         timeSinceImpact = 100;
         print(timerOn);
         flag = false;
