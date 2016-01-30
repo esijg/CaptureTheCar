@@ -13,6 +13,12 @@ public class GameManagement : MonoBehaviour {
     float p4timer;
     GameObject winner;
 
+    GUIStyle p1Col = new GUIStyle();
+    GUIStyle p2Col = new GUIStyle();
+    GUIStyle p3Col = new GUIStyle();
+    GUIStyle p4Col = new GUIStyle();
+
+    // blár grænn gulur rauður
     // Use this for initialization
     void Start () {
         p1 = GameObject.Find("p1_Car");
@@ -24,6 +30,14 @@ public class GameManagement : MonoBehaviour {
         p3timer = p3.GetComponent<playerCollision>().timer;
         p4timer = p4.GetComponent<playerCollision>().timer;
         winner = GameObject.Find("Winner");
+        p1Col.normal.textColor = Color.blue;
+        p2Col.normal.textColor = Color.green;
+        p3Col.normal.textColor = Color.yellow;
+        p4Col.normal.textColor = Color.red;
+        p1Col.fontSize = 20;
+        p2Col.fontSize = 20;
+        p3Col.fontSize = 20;
+        p4Col.fontSize = 20;
 
     }
 	
@@ -67,9 +81,9 @@ public class GameManagement : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 150, 150), "P1 time left: " + p1timer.ToString());
-        GUI.Label(new Rect(10, 20, 150, 150), "P2 time left: " + p2timer.ToString());
-        GUI.Label(new Rect(10, 30, 150, 150), "P3 time left: " + p3timer.ToString());
-        GUI.Label(new Rect(10, 40, 150, 150), "P4 time left: " + p4timer.ToString());
+       GUI.Label(new Rect(10, 10, 150, 150), "P1 time left: " + p1timer.ToString(), p1Col);
+       GUI.Label(new Rect(10, 30, 150, 150), "P2 time left: " + p2timer.ToString(), p2Col);
+       GUI.Label(new Rect(10, 50, 150, 150), "P3 time left: " + p3timer.ToString(), p3Col);
+       GUI.Label(new Rect(10, 70, 150, 150), "P4 time left: " + p4timer.ToString(), p4Col);
     }
 }
