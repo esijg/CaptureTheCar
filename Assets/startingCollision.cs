@@ -25,6 +25,7 @@ public class startingCollision : MonoBehaviour {
         {
             print("hussa");
             col.gameObject.GetComponentInParent<playerCollision>().timerOn = true;
+            Destroy(gameObject);
         }
     }
 }
