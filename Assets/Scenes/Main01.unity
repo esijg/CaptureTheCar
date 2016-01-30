@@ -634,10 +634,13 @@ Prefab:
       propertyPath: m_Name
       value: p1_Car
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 11477584, guid: ec6a49b7462553c449588a8cbc2e75a8, type: 2}
       propertyPath: timerOn
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> origin/master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec6a49b7462553c449588a8cbc2e75a8, type: 2}
   m_IsPrefabParent: 0
