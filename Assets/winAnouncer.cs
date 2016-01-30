@@ -8,7 +8,7 @@ public class winAnouncer : MonoBehaviour {
         GameObject win;
         win = GameObject.Find("Winner");
         string winnerNr = win.GetComponent<winnerScript>().winnerNr.ToString();
-        this.GetComponent<TextMesh>().text = "Game Over \n The winner is player number " + winnerNr;
+        this.GetComponent<TextMesh>().text = "Game Over \n The winner is player number " + winnerNr + "\n Press \"Enter\" to reset.";
 
     }
 	
