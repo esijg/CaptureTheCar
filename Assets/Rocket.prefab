@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073f0336d5e4ae649b652e1272e2691a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 165552, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -170,6 +171,10 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 165552, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196692}
