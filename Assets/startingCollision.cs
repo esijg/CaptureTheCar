@@ -15,8 +15,11 @@ public class startingCollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        print("huzza");
-        col.gameObject.GetComponent<playerCollision>().timerOn = true;
-        Destroy(gameObject);
+        print(col.gameObject.tag == "player");
+        if(col.gameObject.tag == "player")
+        {
+            col.gameObject.GetComponent<playerCollision>().timerOn = true;
+            Destroy(gameObject);
+        }
     }
 }
