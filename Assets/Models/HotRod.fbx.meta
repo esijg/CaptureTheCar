@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7aba15b09c0e3f44e8cf875b4095c51d
-timeCreated: 1454152987
+guid: 22bdc95b3ab0faf4ebcb1c0aa53b9ced
+timeCreated: 1454161723
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -11,18 +11,18 @@ ModelImporter:
     100006: FRWheel
     100008: //RootNode
     100010: HotRodShell
-    100012: polySurface15
-    100014: polySurface17
-    100016: polySurface19
+    100012: polySurface35
+    100014: polySurface37
+    100016: polySurface39
     400000: BLWheel
     400002: BRWheel
     400004: FLWheel
     400006: FRWheel
     400008: //RootNode
     400010: HotRodShell
-    400012: polySurface15
-    400014: polySurface17
-    400016: polySurface19
+    400012: polySurface35
+    400014: polySurface37
+    400016: polySurface39
     2300000: BLWheel
     2300002: BRWheel
     2300004: FLWheel
@@ -33,10 +33,10 @@ ModelImporter:
     3300004: FLWheel
     3300006: FRWheel
     3300008: HotRodShell
-    4300000: BLWheel
-    4300002: BRWheel
-    4300004: FRWheel
-    4300006: FLWheel
+    4300000: FLWheel
+    4300002: BLWheel
+    4300004: BRWheel
+    4300006: FRWheel
     4300008: HotRodShell
     9500000: //RootNode
   materials:
@@ -63,7 +63,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

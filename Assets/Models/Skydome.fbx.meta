@@ -1,37 +1,15 @@
 fileFormatVersion: 2
-guid: 8931ee8f90517074e9b2c4bc304527cb
-timeCreated: 1454161724
+guid: 478e5d22d4e75e340948f8dcfd51d481
+timeCreated: 1454161723
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: BLWheel
-    100002: BRWheel
-    100004: FLWheel
-    100006: FRWheel
-    100008: //RootNode
-    100010: JeepShell
-    400000: BLWheel
-    400002: BRWheel
-    400004: FLWheel
-    400006: FRWheel
-    400008: //RootNode
-    400010: JeepShell
-    2300000: BLWheel
-    2300002: BRWheel
-    2300004: FLWheel
-    2300006: FRWheel
-    2300008: JeepShell
-    3300000: BLWheel
-    3300002: BRWheel
-    3300004: FLWheel
-    3300006: FRWheel
-    3300008: JeepShell
-    4300000: FLWheel
-    4300002: JeepShell
-    4300004: FRWheel
-    4300006: BRWheel
-    4300008: BLWheel
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pSphere1
     9500000: //RootNode
   materials:
     importMaterials: 1
