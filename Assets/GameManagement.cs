@@ -21,10 +21,10 @@ public class GameManagement : MonoBehaviour {
     // blár grænn gulur rauður
     // Use this for initialization
     void Start () {
-        p1 = GameObject.Find("p1_Car");
-        p2 = GameObject.Find("p2_Car");
-        p3 = GameObject.Find("p3_Car");
-        p4 = GameObject.Find("p4_Car");
+        p1 = GameObject.Find("HotRod");
+        p2 = GameObject.Find("Jeep");
+        p3 = GameObject.Find("Racer");
+        p4 = GameObject.Find("VWBraud");
         p1timer = p1.GetComponent<playerCollision>().timer;
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;

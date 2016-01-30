@@ -187,7 +187,6 @@ GameObject:
   - 20: {fileID: 2027226}
   - 124: {fileID: 12489882}
   - 92: {fileID: 9243132}
-  - 81: {fileID: 8148854}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -545,8 +544,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.606575, y: 5.2614868e-14, z: -39.444244}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414292}
@@ -954,13 +953,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &8148854
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150370}
-  m_Enabled: 1
 --- !u!82 &8216862
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1292,7 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 0}
+  wheel: {fileID: 162912}
 --- !u!114 &11425606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1304,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 0}
+  wheel: {fileID: 129138}
 --- !u!114 &11436042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1468,7 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  timerOn: 1
+  timerOn: 0
   playerNumber: 3
 --- !u!124 &12489882
 Behaviour:
@@ -1599,7 +1591,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: timerOn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115100}

@@ -285,16 +285,16 @@ namespace UnityStandardAssets.Vehicles.Car
                     // if they do it can lead to some strange audio artefacts
                     if (!AnySkidSoundPlaying())
                     {
-                        m_WheelEffects[i].PlayAudio();
+                        // m_WheelEffects[i].PlayAudio();
                     }
                     continue;
                 }
 
                 // if it wasnt slipping stop all the audio
-                if (m_WheelEffects[i].PlayingAudio)
-                {
-                    m_WheelEffects[i].StopAudio();
-                }
+                //if (m_WheelEffects[i].PlayingAudio)
+                //{
+                //    m_WheelEffects[i].StopAudio();
+                //}
                 // end the trail generation
                 m_WheelEffects[i].EndSkidTrail();
             }
@@ -354,13 +354,13 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private bool AnySkidSoundPlaying()
         {
-            for (int i = 0; i < 4; i++)
-            {
-                if (m_WheelEffects[i].PlayingAudio)
-                {
-                    return true;
-                }
-            }
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        if (m_WheelEffects[i].PlayingAudio)
+        //        {
+        //            return true;
+        //        }
+        //    }
             return false;
         }
     }
