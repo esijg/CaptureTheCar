@@ -16,16 +16,13 @@ public class GameManagement : MonoBehaviour {
     int p2counter;
     int p3counter;
     int p4counter;
+    GameObject staticStorage;
 
     GUIStyle p1Col = new GUIStyle();
     GUIStyle p2Col = new GUIStyle();
     GUIStyle p3Col = new GUIStyle();
     GUIStyle p4Col = new GUIStyle();
 
-    public GameObject startSphereReset;
-    GameObject startSphere;
-    Vector3 SphereLoc;
-    Quaternion SphereRot;
 
     // blár grænn gulur rauður
     // Use this for initialization
@@ -34,9 +31,6 @@ public class GameManagement : MonoBehaviour {
         p2 = GameObject.Find("Jeep");
         p3 = GameObject.Find("Racer");
         p4 = GameObject.Find("VWBraud");
-        startSphere = GameObject.Find("StartingSphere");
-        SphereLoc = startSphere.transform.position;
-        SphereRot = startSphere.transform.rotation;
         p1timer = p1.GetComponent<playerCollision>().timer;
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;
@@ -50,10 +44,13 @@ public class GameManagement : MonoBehaviour {
         p2Col.fontSize = 20;
         p3Col.fontSize = 20;
         p4Col.fontSize = 20;
-        p1counter = 0;
-        p2counter = 0;
-        p3counter = 0;
-        p4counter = 0;
+
+        staticStorage = GameObject.Find("StaticData");
+
+        p1counter = staticStorage.GetComponent<StaticDataStorage>().p1count;
+        p2counter = staticStorage.GetComponent<StaticDataStorage>().p2count;
+        p3counter = staticStorage.GetComponent<StaticDataStorage>().p3count;
+        p4counter = staticStorage.GetComponent<StaticDataStorage>().p4count;
 
     }
 	
@@ -76,7 +73,7 @@ public class GameManagement : MonoBehaviour {
             }
             else
             {
-                p1counter++;
+                staticStorage.GetComponent<StaticDataStorage>().p1count++;
                 reset();
 
 
@@ -95,7 +92,7 @@ public class GameManagement : MonoBehaviour {
             }
             else
             {
-                p2counter++;
+                staticStorage.GetComponent<StaticDataStorage>().p2count++;
                 reset();
             }
 
@@ -111,7 +108,7 @@ public class GameManagement : MonoBehaviour {
             }
             else
             {
-                p3counter++;
+                staticStorage.GetComponent<StaticDataStorage>().p3count++;
                 reset();
             }
 
@@ -127,7 +124,7 @@ public class GameManagement : MonoBehaviour {
             }
             else
             {
-                p4counter++;
+                staticStorage.GetComponent<StaticDataStorage>().p4count++;
                 reset();
             }
 
@@ -137,11 +134,8 @@ public class GameManagement : MonoBehaviour {
 
     void reset()
     {
-        p1.GetComponent<playerCollision>().reset();
-        p2.GetComponent<playerCollision>().reset();
-        p3.GetComponent<playerCollision>().reset();
-        p4.GetComponent<playerCollision>().reset();
-        Instantiate(startSphereReset, SphereLoc, SphereRot);
+        Object.DontDestroyOnLoad(staticStorage);
+        Application.LoadLevel("MainScene");    
 
     }
 
