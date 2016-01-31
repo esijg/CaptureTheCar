@@ -3,8 +3,10 @@ using System.Collections;
 
 public class rocket : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject explosion;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -23,7 +25,8 @@ public class rocket : MonoBehaviour {
 
             if (hit.GetComponent<Rigidbody>())
             {
-                hit.GetComponent<Rigidbody>().AddExplosionForce(10000, expPos, 10);
+                Instantiate(explosion, transform.position, transform.rotation);
+                // hit.GetComponent<Rigidbody>().AddExplosionForce(10000, expPos, 10);
             }
 
 
