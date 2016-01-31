@@ -20,5 +20,13 @@ public class newGame : MonoBehaviour {
         {
             Application.LoadLevel("RaceScene");
         }
+        if (Input.GetKeyDown("i"))
+        {
+            Application.LoadLevel("Instructions");
+        }
+        if (Input.GetKeyDown("c"))
+        {
+            Application.LoadLevel("Credits");
+        }
     }
 }

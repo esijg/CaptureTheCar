@@ -305,7 +305,11 @@ TextMesh:
   m_GameObject: {fileID: 580714107}
   m_Text: 'Press "Enter" To Play Reverse Tag
 
-    Press "Space" To Race'
+    Press "Space" To Race
+
+    Press "i" To See Instructions
+
+    Press "c" To See Credits'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
