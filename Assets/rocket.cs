@@ -15,6 +15,13 @@ public class rocket : MonoBehaviour {
 	
 	}
 
+
+    public void triggeredExplosion()
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
     void OnCollisionEnter(Collision col)
     {
         Vector3 expPos = transform.position;
@@ -25,6 +32,7 @@ public class rocket : MonoBehaviour {
 
             if (hit.GetComponent<Rigidbody>())
             {
+
                 Instantiate(explosion, transform.position, transform.rotation);
                 // hit.GetComponent<Rigidbody>().AddExplosionForce(10000, expPos, 10);
             }
