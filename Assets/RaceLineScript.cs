@@ -12,10 +12,9 @@ public class RaceLineScript : MonoBehaviour {
 	void Update () {
 	
 	}
-
-    void OnCollisionEnter(Collision col)
+ void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.GetComponent<RaceScript>().checkPointCounter == 7)
+        if (col.gameObject.GetComponent<RaceScript>().checkPointCounter >= 7)
         {
             col.gameObject.GetComponent<RaceScript>().lapCounter++;
             col.gameObject.GetComponent<RaceScript>().checkPointCounter = 0;

@@ -15,7 +15,7 @@ public class playerCollision : MonoBehaviour {
     Quaternion initRot;
     // Use this for initializat
     void Start () {
-        timerInit = 5;
+        timerInit = 60;
         initPos = transform.position;
         initRot = transform.rotation;
         timer = timerInit;

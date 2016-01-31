@@ -68,8 +68,7 @@ public class GameManagement : MonoBehaviour {
             if (p1counter == 1)
             {
                 winner.GetComponent<winnerScript>().winnerNr = 1;
-                Object.DontDestroyOnLoad(winner);
-                Application.LoadLevel("GameOver");
+                winCondition();
             }
             else
             {
@@ -87,8 +86,7 @@ public class GameManagement : MonoBehaviour {
             if(p2counter == 1)
             {
                 winner.GetComponent<winnerScript>().winnerNr = 2;
-                Object.DontDestroyOnLoad(winner);
-                Application.LoadLevel("GameOver");
+                winCondition();
             }
             else
             {
@@ -103,8 +101,7 @@ public class GameManagement : MonoBehaviour {
             if(p3counter == 1)
             {
                 winner.GetComponent<winnerScript>().winnerNr = 3;
-                Object.DontDestroyOnLoad(winner);
-                Application.LoadLevel("GameOver");
+                winCondition();
             }
             else
             {
@@ -119,8 +116,7 @@ public class GameManagement : MonoBehaviour {
             if (p4counter == 1)
             {
                 winner.GetComponent<winnerScript>().winnerNr = 4;
-                Object.DontDestroyOnLoad(winner);
-                Application.LoadLevel("GameOver");
+                winCondition();
             }
             else
             {
@@ -137,6 +133,16 @@ public class GameManagement : MonoBehaviour {
         Object.DontDestroyOnLoad(staticStorage);
         Application.LoadLevel("MainScene");    
 
+    }
+
+    void winCondition()
+    {
+        Object.DontDestroyOnLoad(winner);
+        staticStorage.GetComponent<StaticDataStorage>().p1count = 0;
+        staticStorage.GetComponent<StaticDataStorage>().p2count = 0;
+        staticStorage.GetComponent<StaticDataStorage>().p3count = 0;
+        staticStorage.GetComponent<StaticDataStorage>().p4count = 0;
+        Application.LoadLevel("GameOver");
     }
 
     void OnGUI()
