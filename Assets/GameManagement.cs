@@ -12,6 +12,10 @@ public class GameManagement : MonoBehaviour {
     float p3timer;
     float p4timer;
     GameObject winner;
+    int p1counter;
+    int p2counter;
+    int p3counter;
+    int p4counter;
 
     GUIStyle p1Col = new GUIStyle();
     GUIStyle p2Col = new GUIStyle();
@@ -38,7 +42,10 @@ public class GameManagement : MonoBehaviour {
         p2Col.fontSize = 20;
         p3Col.fontSize = 20;
         p4Col.fontSize = 20;
-
+        p1counter = 0;
+        p2counter = 0;
+        p3counter = 0;
+        p4counter = 0;
     }
 	
 	// Update is called once per frame
@@ -52,30 +59,67 @@ public class GameManagement : MonoBehaviour {
         
         if(p1timer <= 0)
         {
-            winner.GetComponent<winnerScript>().winnerNr = 1;
-            Object.DontDestroyOnLoad(winner);
-            Application.LoadLevel("GameOver");
+            if (p1counter == 1)
+            {
+                winner.GetComponent<winnerScript>().winnerNr = 1;
+                Object.DontDestroyOnLoad(winner);
+                Application.LoadLevel("GameOver");
+            }
+            else
+            {
+                p1counter++;
+                p1.GetComponent<playerCollision>().restartTimer();
+
+            }
+
             
         }
         else if(p2timer <= 0)
         {
-            winner.GetComponent<winnerScript>().winnerNr = 2;
-            Object.DontDestroyOnLoad(winner);
-            Application.LoadLevel("GameOver");
+            if(p2counter == 1)
+            {
+                winner.GetComponent<winnerScript>().winnerNr = 2;
+                Object.DontDestroyOnLoad(winner);
+                Application.LoadLevel("GameOver");
+            }
+            else
+            {
+                p2counter++;
+                p2.GetComponent<playerCollision>().restartTimer();
+            }
+
             
         }
         else if(p3timer <= 0)
         {
-            winner.GetComponent<winnerScript>().winnerNr = 3;
-            Object.DontDestroyOnLoad(winner);
-            Application.LoadLevel("GameOver");
+            if(p3counter == 1)
+            {
+                winner.GetComponent<winnerScript>().winnerNr = 3;
+                Object.DontDestroyOnLoad(winner);
+                Application.LoadLevel("GameOver");
+            }
+            else
+            {
+                p3counter++;
+                p3.GetComponent<playerCollision>().restartTimer();
+            }
+
             
         }
         else if(p4timer <= 0)
         {
-            winner.GetComponent<winnerScript>().winnerNr = 4;
-            Object.DontDestroyOnLoad(winner);
-            Application.LoadLevel("GameOver");
+            if (p4counter == 1)
+            {
+                winner.GetComponent<winnerScript>().winnerNr = 4;
+                Object.DontDestroyOnLoad(winner);
+                Application.LoadLevel("GameOver");
+            }
+            else
+            {
+                p4counter++;
+                p4.GetComponent<playerCollision>().restartTimer();
+            }
+
             
         }
     }
@@ -87,5 +131,9 @@ public class GameManagement : MonoBehaviour {
        GUI.Label(new Rect(10, 30, 150, 150), "P2 time left: " + p2timer.ToString(), p2Col);
        GUI.Label(new Rect(10, 50, 150, 150), "P3 time left: " + p3timer.ToString(), p3Col);
        GUI.Label(new Rect(10, 70, 150, 150), "P4 time left: " + p4timer.ToString(), p4Col);
+       GUI.Label(new Rect(600, 10, 150, 150), "P1 victories: " + p1counter.ToString() + "/2", p1Col);
+       GUI.Label(new Rect(600, 30, 150, 150), "P2 victories: " + p2counter.ToString() + "/2", p2Col);
+       GUI.Label(new Rect(600, 50, 150, 150), "P3 victories: " + p3counter.ToString() + "/2", p3Col);
+       GUI.Label(new Rect(600, 70, 150, 150), "P4 victories: " + p4counter.ToString() + "/2", p4Col);
     }
 }

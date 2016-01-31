@@ -23,8 +23,8 @@ public class startingCollision : MonoBehaviour {
         }
         else
         {
-            print("hussa");
             col.gameObject.GetComponentInParent<playerCollision>().timerOn = true;
+            Destroy(gameObject);
         }
     }
 }

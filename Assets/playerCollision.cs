@@ -9,16 +9,22 @@ public class playerCollision : MonoBehaviour {
     public GameObject indicator;
     public bool flag;
     float timeSinceImpact;
+    float timerInit;
     GameObject ind;
     // Use this for initializat
     void Start () {
-        timer = 60;
+        timerInit = 5;
+        timer = timerInit;
         timeSinceImpact = 100;
         print(timerOn);
         flag = false;
 
 	}
-	
+
+    public void restartTimer()
+    {
+        timer = timerInit;
+    }	
 
 	// Update is called once per frame
 	void Update () {
