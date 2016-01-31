@@ -11,10 +11,8 @@ public class playerCollision : MonoBehaviour {
     float timeSinceImpact;
     float timerInit;
     GameObject ind;
-    Vector3 initPos;
     // Use this for initializat
     void Start () {
-        initPos = gameObject.transform.position;
         timerInit = 60;
         timer = timerInit;
         timeSinceImpact = 100;
@@ -23,10 +21,6 @@ public class playerCollision : MonoBehaviour {
 
 	}
 
-    public void reset()
-    {
-        gameObject.transform.position = initPos;
-    }
 
     public void restartTimer()
     {
