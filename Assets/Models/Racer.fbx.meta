@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 173f4d6b606ce374fba7a89cfbc1f2c4
-timeCreated: 1454161723
+guid: d5f31b5761e556042a175c7635ed6cdf
+timeCreated: 1454188721
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,29 +9,33 @@ ModelImporter:
     100002: BRWheel
     100004: FLWheel
     100006: FRWheel
-    100008: JeepShell
-    100010: //RootNode
+    100008: polySurface51
+    100010: Racer
+    100012: //RootNode
     400000: BLWheel
     400002: BRWheel
     400004: FLWheel
     400006: FRWheel
-    400008: JeepShell
-    400010: //RootNode
+    400008: polySurface51
+    400010: Racer
+    400012: //RootNode
     2300000: BLWheel
     2300002: BRWheel
     2300004: FLWheel
     2300006: FRWheel
-    2300008: JeepShell
+    2300008: Racer
+    2300010: //RootNode
     3300000: BLWheel
     3300002: BRWheel
     3300004: FLWheel
     3300006: FRWheel
-    3300008: JeepShell
+    3300008: Racer
+    3300010: //RootNode
     4300000: FLWheel
-    4300002: JeepShell
-    4300004: FRWheel
-    4300006: BRWheel
-    4300008: BLWheel
+    4300002: FRWheel
+    4300004: BRWheel
+    4300006: BLWheel
+    4300008: Racer
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 22bdc95b3ab0faf4ebcb1c0aa53b9ced
-timeCreated: 1454161723
+guid: a4816e695c8d5564aa773b6d99ed12e9
+timeCreated: 1454247656
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -10,34 +10,26 @@ ModelImporter:
     100004: FLWheel
     100006: FRWheel
     100008: //RootNode
-    100010: HotRodShell
-    100012: polySurface35
-    100014: polySurface37
-    100016: polySurface39
     400000: BLWheel
     400002: BRWheel
     400004: FLWheel
     400006: FRWheel
     400008: //RootNode
-    400010: HotRodShell
-    400012: polySurface35
-    400014: polySurface37
-    400016: polySurface39
     2300000: BLWheel
     2300002: BRWheel
     2300004: FLWheel
     2300006: FRWheel
-    2300008: HotRodShell
+    2300008: //RootNode
     3300000: BLWheel
     3300002: BRWheel
     3300004: FLWheel
     3300006: FRWheel
-    3300008: HotRodShell
-    4300000: FLWheel
-    4300002: BLWheel
-    4300004: BRWheel
-    4300006: FRWheel
-    4300008: HotRodShell
+    3300008: //RootNode
+    4300000: HotRodShell1
+    4300002: FLWheel
+    4300004: BLWheel
+    4300006: BRWheel
+    4300008: FRWheel
     9500000: //RootNode
   materials:
     importMaterials: 1

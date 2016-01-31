@@ -1,43 +1,40 @@
 fileFormatVersion: 2
-guid: 7c628bde8e2bf9641b851fb77925042b
-timeCreated: 1454161723
+guid: 955a0a8afcd8cd6409fef7da42da02ab
+timeCreated: 1454189716
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: BLWheel
-    100002: BRWHeel
+    100002: BRWheel
     100004: FLWheel
     100006: FRWheel
-    100008: polySurface28
-    100010: polySurface30
-    100012: polySurface32
-    100014: //RootNode
-    100016: VWBraudShell
+    100008: //RootNode
+    100010: BLWHeel
     400000: BLWheel
-    400002: BRWHeel
+    400002: BRWheel
     400004: FLWheel
     400006: FRWheel
-    400008: polySurface28
-    400010: polySurface30
-    400012: polySurface32
-    400014: //RootNode
-    400016: VWBraudShell
+    400008: //RootNode
+    400010: BLWHeel
     2300000: BLWheel
-    2300002: BRWHeel
+    2300002: BRWheel
     2300004: FLWheel
     2300006: FRWheel
-    2300008: VWBraudShell
+    2300008: //RootNode
+    2300010: BLWHeel
     3300000: BLWheel
-    3300002: BRWHeel
+    3300002: BRWheel
     3300004: FLWheel
     3300006: FRWheel
-    3300008: VWBraudShell
-    4300000: FLWheel
-    4300002: FRWheel
-    4300004: BRWHeel
-    4300006: VWBraudShell
-    4300008: BLWheel
+    3300008: //RootNode
+    3300010: BLWHeel
+    4300000: VWBraudShell
+    4300002: BLWheel
+    4300004: FRWheel
+    4300006: BRWheel
+    4300008: FLWheel
+    4300010: BLWHeel
     9500000: //RootNode
   materials:
     importMaterials: 1
