@@ -22,6 +22,11 @@ public class GameManagement : MonoBehaviour {
     GUIStyle p3Col = new GUIStyle();
     GUIStyle p4Col = new GUIStyle();
 
+    public GameObject startSphereReset;
+    GameObject startSphere;
+    Vector3 SphereLoc;
+    Quaternion SphereRot;
+
     // blár grænn gulur rauður
     // Use this for initialization
     void Start () {
@@ -29,6 +34,9 @@ public class GameManagement : MonoBehaviour {
         p2 = GameObject.Find("Jeep");
         p3 = GameObject.Find("Racer");
         p4 = GameObject.Find("VWBraud");
+        startSphere = GameObject.Find("StartingSphere");
+        SphereLoc = startSphere.transform.position;
+        SphereRot = startSphere.transform.rotation;
         p1timer = p1.GetComponent<playerCollision>().timer;
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;
@@ -46,6 +54,7 @@ public class GameManagement : MonoBehaviour {
         p2counter = 0;
         p3counter = 0;
         p4counter = 0;
+
     }
 	
 	// Update is called once per frame
@@ -68,8 +77,7 @@ public class GameManagement : MonoBehaviour {
             else
             {
                 p1counter++;
-                p1.GetComponent<playerCollision>().restartTimer();
-                // p1.GetComponent<playerCollision>().reset();
+                reset();
 
 
 
@@ -88,7 +96,7 @@ public class GameManagement : MonoBehaviour {
             else
             {
                 p2counter++;
-                p2.GetComponent<playerCollision>().restartTimer();
+                reset();
             }
 
             
@@ -104,7 +112,7 @@ public class GameManagement : MonoBehaviour {
             else
             {
                 p3counter++;
-                p3.GetComponent<playerCollision>().restartTimer();
+                reset();
             }
 
             
@@ -120,13 +128,22 @@ public class GameManagement : MonoBehaviour {
             else
             {
                 p4counter++;
-                p4.GetComponent<playerCollision>().restartTimer();
+                reset();
             }
 
             
         }
     }
 
+    void reset()
+    {
+        p1.GetComponent<playerCollision>().reset();
+        p2.GetComponent<playerCollision>().reset();
+        p3.GetComponent<playerCollision>().reset();
+        p4.GetComponent<playerCollision>().reset();
+        Instantiate(startSphereReset, SphereLoc, SphereRot);
+
+    }
 
     void OnGUI()
     {

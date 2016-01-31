@@ -11,9 +11,13 @@ public class playerCollision : MonoBehaviour {
     float timeSinceImpact;
     float timerInit;
     GameObject ind;
+    Vector3 initPos;
+    Quaternion initRot;
     // Use this for initializat
     void Start () {
-        timerInit = 60;
+        timerInit = 5;
+        initPos = transform.position;
+        initRot = transform.rotation;
         timer = timerInit;
         timeSinceImpact = 100;
         print(timerOn);
@@ -22,10 +26,15 @@ public class playerCollision : MonoBehaviour {
 	}
 
 
-    public void restartTimer()
+    public void reset()
     {
+        transform.position = initPos;
+        flag = false;
+        timerOn = false;
         timer = timerInit;
-    }	
+        Destroy(ind);
+        transform.rotation = initRot;
+    }
 
 	// Update is called once per frame
 	void Update () {

@@ -3,9 +3,11 @@ using System.Collections;
 
 public class startingCollision : MonoBehaviour {
 
+
+    public Vector3 startloc;
 	// Use this for initialization
 	void Start () {
-	
+        startloc = transform.position;
 	}
 	
 	// Update is called once per frame
