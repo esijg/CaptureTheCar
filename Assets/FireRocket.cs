@@ -14,11 +14,15 @@ public class FireRocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetButtonDown("Fire" + gameObject.GetComponentInParent<playerCollision>().playerNumber.ToString()))
+	    if(Input.GetButtonDown("Fire" + gameObject.GetComponentInParent<playerCollision>().playerNumber.ToString()) && transform.childCount == 0)
         {
             rocket = (GameObject) Instantiate(rock, transform.position, transform.rotation);
             rocket.transform.parent = transform;
 
+        }
+        else if(Input.GetButtonDown("Fire" + gameObject.GetComponentInParent<playerCollision>().playerNumber.ToString()) && transform.childCount != 0)
+        {
+            gameObject.GetComponentInChildren<rocket>().triggeredExplosion();
         }
 	}
 }
