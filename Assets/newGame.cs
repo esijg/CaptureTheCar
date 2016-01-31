@@ -24,5 +24,9 @@ public class newGame : MonoBehaviour {
         {
             Application.LoadLevel("Instructions");
         }
+        if (Input.GetKeyDown("c"))
+        {
+            Application.LoadLevel("Credits");
+        }
     }
 }
