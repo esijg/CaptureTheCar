@@ -69,7 +69,7 @@ public class GameManagement : MonoBehaviour {
             {
                 p1counter++;
                 p1.GetComponent<playerCollision>().restartTimer();
-                p1.GetComponent<playerCollision>().reset();
+                // p1.GetComponent<playerCollision>().reset();
 
 
 
