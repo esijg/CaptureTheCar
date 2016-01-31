@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &149214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 439206}
+  - 33: {fileID: 3359006}
+  - 23: {fileID: 2332498}
+  - 95: {fileID: 9502014}
+  m_Layer: 0
+  m_Name: Rocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &183212
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,9 +45,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460332}
-  - 33: {fileID: 3329320}
   - 65: {fileID: 6519374}
-  - 23: {fileID: 2378920}
   - 54: {fileID: 5409832}
   - 75: {fileID: 7501780}
   - 114: {fileID: 11459938}
@@ -47,11 +63,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183212}
   m_LocalRotation: {x: 1, y: 0.0000008146034, z: 0.0000008146034, w: 6.6357873e-13}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0.782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 460332}
   m_RootOrder: 0
+--- !u!4 &439206
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 460332}
+  m_RootOrder: 1
 --- !u!4 &460332
 Transform:
   m_ObjectHideFlags: 1
@@ -59,30 +87,31 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.735379, y: 9.37, z: -2.8442822}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -0.2919464, y: 0.981915, z: 34.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420292}
+  - {fileID: 439206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2378920
+--- !u!23 &2332498
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196692}
+  m_GameObject: {fileID: 149214}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9d2ac3715a3343746a16daadba39e7f8, type: 2}
+  - {fileID: 2100000, guid: 79876e3912122164cab88e487d59d70c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -91,13 +120,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3329320
+--- !u!33 &3359006
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196692}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 149214}
+  m_Mesh: {fileID: 4300000, guid: 329894bd4d22200499d1671b56d36185, type: 3}
 --- !u!54 &5409832
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -123,7 +152,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 8, y: 0.6, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!75 &7501780
 ConstantForce:
@@ -136,6 +165,23 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 100000}
   m_Torque: {x: 0, y: 0, z: 2}
   m_RelativeTorque: {x: 0, y: 0, z: 2}
+--- !u!95 &9502014
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 329894bd4d22200499d1671b56d36185, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11419586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +267,7 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   scalingMode: 2
   InitialModule:
     serializedVersion: 2
@@ -519,7 +565,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 30
+      scalar: 300
       maxCurve:
         serializedVersion: 2
         m_Curve:
