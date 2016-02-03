@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b72f3e800b6ec4f88274bfe07eeec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indicator: {fileID: 0}
+  startloc: {x: 0, y: 0, z: 0}
 --- !u!135 &13557016
 SphereCollider:
   m_ObjectHideFlags: 1
