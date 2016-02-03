@@ -7008,6 +7008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b72f3e800b6ec4f88274bfe07eeec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indicator: {fileID: 105420, guid: 59e5337a222de814f93a84025020cc2e, type: 2}
   startloc: {x: 0, y: 0, z: 0}
 --- !u!23 &1751495644
 MeshRenderer:
