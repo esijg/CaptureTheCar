@@ -20,7 +20,6 @@ public class playerCollision : MonoBehaviour {
         initRot = transform.rotation;
         timer = timerInit;
         timeSinceImpact = 100;
-        print(timerOn);
         flag = false;
 
 	}
@@ -51,7 +50,7 @@ public class playerCollision : MonoBehaviour {
             ind = (GameObject) Instantiate(indicator, transform.position, transform.rotation);
             ind.transform.parent = transform;
             flag = true;
-            
+
         }
         if (timerOn == false && flag == true)
         {

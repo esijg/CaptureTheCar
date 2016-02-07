@@ -11,15 +11,14 @@ public class startingCollision : MonoBehaviour {
         startloc = transform.position;
         ind = (GameObject)Instantiate(indicator, transform.position, transform.rotation);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     void OnCollisionEnter(Collision col)
     {
-        print(col.gameObject.tag == "player");
         if(col.gameObject.tag == "player")
         {
             col.gameObject.GetComponent<playerCollision>().timerOn = true;
