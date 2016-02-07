@@ -144,9 +144,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446584}
-  - 114: {fileID: 11462522}
   - 54: {fileID: 5410322}
   - 82: {fileID: 8230000}
+  - 114: {fileID: 11474644}
   m_Layer: 0
   m_Name: RocketExplosion
   m_TagString: Untagged
@@ -219,7 +219,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55323696, y: 0, z: -2.234365}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474448}
@@ -262,7 +262,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.59, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 426344}
@@ -430,8 +430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac1691131a8c844dafe8b6ace6a172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 20
---- !u!114 &11462522
+  explosionForce: 5000
+--- !u!114 &11474644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -442,8 +442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e16a0914ffd0e4049ad5c517ab5c4bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AreaOfEffect: 100
-  Strength: 10000
 --- !u!114 &11484796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13880,6 +13878,34 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: AreaOfEffect
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Power
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ExplosiveLift
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosionForce
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

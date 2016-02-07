@@ -47,7 +47,6 @@ GameObject:
   - 4: {fileID: 460332}
   - 65: {fileID: 6519374}
   - 54: {fileID: 5409832}
-  - 75: {fileID: 7501780}
   - 114: {fileID: 11459938}
   - 82: {fileID: 8250338}
   m_Layer: 0
@@ -88,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2919464, y: 0.981915, z: 34.03}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420292}
@@ -141,7 +140,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &6519374
 BoxCollider:
@@ -153,19 +152,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.6, z: 2}
+  m_Size: {x: 0.3, y: 0.3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!75 &7501780
-ConstantForce:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196692}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 100000}
-  m_Torque: {x: 0, y: 0, z: 2}
-  m_RelativeTorque: {x: 0, y: 0, z: 2}
 --- !u!82 &8250338
 AudioSource:
   m_ObjectHideFlags: 1
@@ -280,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073f0336d5e4ae649b652e1272e2691a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 165552, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
+  explosionPrefab: {fileID: 446584, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
 --- !u!114 &11489790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1830,10 +1818,26 @@ Prefab:
       objectReference: {fileID: 165552, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
     - target: {fileID: 0}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 446584, guid: a53b2ec3380b11047b9d6e8032548a5c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

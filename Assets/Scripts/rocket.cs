@@ -1,47 +1,27 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class rocket : MonoBehaviour {
 
-    public GameObject explosion;
+    public Transform explosionPrefab;
 
     // Use this for initialization
     void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+        GameObject grandpa = transform.parent.parent.gameObject;
+        Physics.IgnoreCollision(grandpa.GetComponent<Collider>(), GetComponent<Collider>());
+        Destroy(gameObject, 3);
 	}
 
-
-    public void triggeredExplosion()
+    public void Explode(Vector3 pos, Quaternion rot)
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+        Instantiate(explosionPrefab, pos, rot);
         Destroy(gameObject);
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        Vector3 expPos = transform.position;
-        Collider[] colliders = Physics.OverlapSphere(expPos, 10);
-
-        foreach (Collider hit in Physics.OverlapSphere(transform.position, 10))
-        {
-
-            if (hit.GetComponent<Rigidbody>())
-            {
-
-                Instantiate(explosion, transform.position, transform.rotation);
-                // hit.GetComponent<Rigidbody>().AddExplosionForce(10000, expPos, 10);
-            }
-
-
-        }
-        Destroy(gameObject);
-
-
-
+    void OnCollisionEnter(Collision collision) {
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        Vector3 pos = contact.point;
+        Explode(pos, rot);
     }
 }
