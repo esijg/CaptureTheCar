@@ -25,12 +25,12 @@ public class GameManagement : MonoBehaviour {
 
 
     // blár grænn gulur rauður
-    // Use this for initialization
+    // TODO Replace GameObject.Find for something a bit more sane
     void Start () {
-        p1 = GameObject.Find("HotRod");
-        p2 = GameObject.Find("Jeep");
-        p3 = GameObject.Find("Racer");
-        p4 = GameObject.Find("VWBraud");
+        p1 = GameObject.Find("HotRod(Clone)");
+        p2 = GameObject.Find("Jeep(Clone)");
+        p3 = GameObject.Find("Racer(Clone)");
+        p4 = GameObject.Find("VWBraud(Clone)");
         p1timer = p1.GetComponent<playerCollision>().timer;
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;
@@ -53,7 +53,7 @@ public class GameManagement : MonoBehaviour {
         p4counter = staticStorage.GetComponent<StaticDataStorage>().p4count;
 
     }
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -62,7 +62,7 @@ public class GameManagement : MonoBehaviour {
         p2timer = p2.GetComponent<playerCollision>().timer;
         p3timer = p3.GetComponent<playerCollision>().timer;
         p4timer = p4.GetComponent<playerCollision>().timer;
-        
+
         if(p1timer <= 0)
         {
             if (p1counter == 1)
@@ -79,7 +79,7 @@ public class GameManagement : MonoBehaviour {
 
             }
 
-            
+
         }
         else if(p2timer <= 0)
         {
@@ -94,7 +94,7 @@ public class GameManagement : MonoBehaviour {
                 reset();
             }
 
-            
+
         }
         else if(p3timer <= 0)
         {
@@ -109,7 +109,7 @@ public class GameManagement : MonoBehaviour {
                 reset();
             }
 
-            
+
         }
         else if(p4timer <= 0)
         {
@@ -124,14 +124,14 @@ public class GameManagement : MonoBehaviour {
                 reset();
             }
 
-            
+
         }
     }
 
     void reset()
     {
         Object.DontDestroyOnLoad(staticStorage);
-        Application.LoadLevel("MainScene");    
+        Application.LoadLevel("MainScene");
 
     }
 
